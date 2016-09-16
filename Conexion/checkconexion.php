@@ -8,12 +8,24 @@
     $password = "";
     $database = "apptodo";
     $dbport = 3306;
+    
 
-    // Create connection
+    // Creamos una nueva conexion
     $db = new mysqli($servername, $username, $password, $database, $dbport);
 
     // Check connection
     if ($db->connect_error) {
         die("Connection failed: " . $db->connect_error);
-    } 
-    echo "Connected successfully (".$db->host_info.")";
+    }
+    $username=$_POST['Izena'];
+    $password=$_POST['pass'];
+    
+    $result=mysql_query("SELECT * from Users where Usuario='$username'");
+    
+    
+    if($row = mysql_fetch_array($result)){
+        if($row['Password']==$password){
+        session_start();
+        header("Location: login.html");
+        }
+    }
