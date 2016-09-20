@@ -1,0 +1,3 @@
+INSERT INTO `databaseIker`.`listas` (`ID`, `nombre`) VALUES (NULL, 'comida'), (NULL, 'etxekolanak');
+INSERT INTO `databaseIker`.`tareas` (`ID`, `nombre`, `descripcion`, `hecho`, `ID_listas`) VALUES (NULL, 'leche', 'Entera', '0', '1'), (NULL, 'azucar', '', '0', '1');
+INSERT INTO `databaseIker`.`tareas` (`ID`, `nombre`, `descripcion`, `hecho`, `ID_listas`) VALUES (NULL, 'Web ariketa', '', '0', '2'), (NULL, 'Sistemak ariketa', '', '0', '2');
