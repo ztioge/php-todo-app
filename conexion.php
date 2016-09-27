@@ -7,7 +7,7 @@ $pass = "";
 
 
 try {
-    $dbh = new PDO('mysql:host=localhost;dbname=databaseIker', $user, $pass);
+    $dbh = new PDO('mysql:host=localhost;dbname=appTodo', $user, $pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch (PDOException $e) {
