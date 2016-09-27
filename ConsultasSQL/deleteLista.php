@@ -5,6 +5,7 @@ require_once("conexion.php");
 
 try{
     
+    //Solo borra listas vacias, sino da error.
     //Hacemos un filtro para que cuando nos den el ID saber que es un Int.
     $idlista = filter_input(INPUT_POST, 'ID', FILTER_VALIDATE_INT);
     

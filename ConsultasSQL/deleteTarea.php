@@ -17,7 +17,7 @@ try{
     
     
     $mensajerror = [
-        "msg" => "Lista Eliminada correctamente"
+        "msg" => "Tarea eliminda"
         ];
     header('Content-Type: application/json');
     echo json_encode($mensajerror);

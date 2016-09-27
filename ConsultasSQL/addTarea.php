@@ -18,7 +18,7 @@ try{
     $sth->execute();
     
     $mensajerror = [
-        "msg" => "Lista Insertada"
+        "msg" => "Tarea Insertada"
         ];
     header('Content-Type: application/json');
     echo json_encode($mensajerror);
