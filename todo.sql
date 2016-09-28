@@ -53,7 +53,7 @@ CREATE TABLE `tareas` (
   `ID_listas` int(8) unsigned NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `ID_listas` (`ID_listas`),
-  CONSTRAINT `tareas_ibfk_1` FOREIGN KEY (`ID_listas`) REFERENCES `listas` (`ID`)
+  CONSTRAINT `tareas_ibfk_1` FOREIGN KEY (`ID_listas`) REFERENCES `listas` (`ID`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
