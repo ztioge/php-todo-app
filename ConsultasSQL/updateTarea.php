@@ -12,7 +12,7 @@ try{
     $hecho = $_POST['hecho'];
     
     //Preparamos la consulta SQL para que se pueda ejecutar.
-    $sth = $dbh->prepare("UPDATE tareas SET nombre='$nombre', descripcion='$descripcion', hecho=$hecho wehere ID=$idtarea");
+    $sth = $dbh->prepare("UPDATE tareas SET nombre='$nombre', descripcion='$descripcion' and hecho=$hecho where ID=$idtarea");
     //Ejecutamos la consulta
     $sth->execute();
     
