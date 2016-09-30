@@ -6,21 +6,19 @@ require_once("conexion.php");
 try{
     
     //Hacemos un filtro para que cuando nos den el ID saber que es un Int.
-    $idtarea = filter_input(INPUT_POST, 'ID', FILTER_VALIDATE_INT);
+    $idlista = filter_input(INPUT_POST, 'ID', FILTER_VALIDATE_INT);
     $nombre = $_POST['nombre'];
-    $descripcion = $_POST['descripcion'];
-    $hecho = $_POST['hecho'];
     
     //Preparamos la consulta SQL para que se pueda ejecutar.
     //Solo funciona si le pasamos todos los parametros.
-    $sth = $dbh->prepare("UPDATE tareas SET nombre='$nombre', descripcion='$descripcion', hecho=$hecho WHERE ID=$idtarea");
+    $sth = $dbh->prepare("UPDATE listas SET nombre='$nombre' WHERE ID=$idlista");
     //Ejecutamos la consulta
     $sth->execute();
     
     
     
     $mensajerror = [
-        "msg" => "Tarea actualizada"
+        "msg" => "Lista actualizada"
         ];
     header('Content-Type: application/json');
     echo json_encode($mensajerror);
