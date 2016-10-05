@@ -9,7 +9,4 @@ if (!isset($_SESSION['count'])) {
   $_SESSION['count']++;
 }
 
-//Escribe en pantalla el contador
-//echo $_SESSION['count'] . "<br />\n";
-
 ?>
